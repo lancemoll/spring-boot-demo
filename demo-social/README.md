@@ -269,7 +269,7 @@ $ nginx -s reload
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <java.version>1.8</java.version>
+    <java.version>11</java.version>
     <justauth-spring-boot.version>1.1.0</justauth-spring-boot.version>
   </properties>
 

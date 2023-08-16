@@ -1,0 +1,42 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: demo
+      demo:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://47.108.215.4:3306/spring-boot-demo-3?useSSL=false&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&autoReconnect=true&serverTimezone=Asia/Shanghai&tinyInt1isBit=false
+        username: root
+        password: lance
+    # 分片的配置
+    rules:
+      sharding:
+        sharding-algorithms:
+          algorithms_string:
+            type: CONSISTENT_HASH_STRING
+          algorithms_long:
+            type: CONSISTENT_HASH_LONG
+        # 表的分片策略
+        tables:
+          # 逻辑表的名称
+          t_order:
+            # 数据节点配置，采用Groovy表达式
+            actual-data-nodes: demo.t_order_$->{0..2}
+            # 配置策略
+            table-strategy:
+              # 用于单分片键的标准分片场景
+              standard:
+                sharding-column: order_id
+                # 分片算法名字
+                sharding-algorithm-name: algorithms_string
+    props:
+      # 日志显示具体的SQL
+      sql-show: true
+
+
+mybatis-plus:
+  global-config:
+    banner: false
+#  mapper-locations: classpath:mappers/*.xml
+
+

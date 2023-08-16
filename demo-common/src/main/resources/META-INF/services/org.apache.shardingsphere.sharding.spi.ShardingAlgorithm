@@ -1,0 +1,2 @@
+com.zerofinance.xpay.commons.component.shardingjdbc.ShardingAlgorithm.ConsistentShardingLongAlgorithm
+com.zerofinance.xpay.commons.component.shardingjdbc.ShardingAlgorithm.ConsistentShardingAlgorithm

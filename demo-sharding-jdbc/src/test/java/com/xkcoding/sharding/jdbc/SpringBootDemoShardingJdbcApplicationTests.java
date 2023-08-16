@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.xkcoding.sharding.jdbc.mapper.OrderMapper;
 import com.xkcoding.sharding.jdbc.model.Order;
+import com.xkcoding.sharding.jdbc.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,6 +31,25 @@ import java.util.List;
 public class SpringBootDemoShardingJdbcApplicationTests {
     @Autowired
     private OrderMapper orderMapper;
+    @Autowired
+    private OrderService orderService;
+
+
+    /**
+     * 测试批量新增
+     */
+    @Test
+    public void testBatchInsert() {
+        ArrayList<Order> list = new ArrayList<>();
+        for (long i = 1; i < 10; i++) {
+            for (long j = 1; j < 20; j++) {
+                Order order = Order.builder().userId(i).orderId(j).remark(RandomUtil.randomString(20)).build();
+                list.add(order);
+            }
+        }
+        orderMapper.insertBatch(list);
+//        orderService.saveBatch(list);
+    }
 
     /**
      * 测试新增

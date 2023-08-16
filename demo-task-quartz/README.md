@@ -32,7 +32,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <mybatis.mapper.version>2.1.0</mybatis.mapper.version>
         <mybatis.pagehelper.version>1.2.10</mybatis.pagehelper.version>
     </properties>
@@ -143,7 +143,7 @@ spring:
 1. clone 本项目
 2. 初始化表格
 3. 启动 `SpringBootDemoTaskQuartzApplication.java`
-4. 打开浏览器，查看 http://localhost:8080/demo/job.html 
+4. 打开浏览器，查看 http://localhost:8080/demo/job.html
 
 ![image-20181126214007372](http://static.xkcoding.com/spring-boot-demo/task/quartz/064006-1.jpg)
 

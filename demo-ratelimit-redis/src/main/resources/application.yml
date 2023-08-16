@@ -4,7 +4,7 @@ server:
     context-path: /demo
 spring:
   redis:
-    host: localhost
+    host: 47.108.215.4
     # 连接超时时间（记得添加单位，Duration）
     timeout: 10000ms
     # Redis默认情况下有16个分片，这里配置具体使用的分片
@@ -19,3 +19,4 @@ spring:
         max-idle: 8
         # 连接池中的最小空闲连接 默认 0
         min-idle: 0
+    password:

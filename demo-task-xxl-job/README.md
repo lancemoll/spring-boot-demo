@@ -68,7 +68,7 @@ Run `XxlJobAdminApplication`
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <java.version>1.8</java.version>
+    <java.version>11</java.version>
     <xxl-job.version>2.1.0</xxl-job.version>
   </properties>
 

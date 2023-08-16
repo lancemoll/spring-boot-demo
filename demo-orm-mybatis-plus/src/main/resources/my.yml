@@ -1,0 +1,15 @@
+userRightsMap:
+  RWD:
+    -read:
+      - all
+    -write:
+      - all
+    -delete:
+      - all
+  RWD1:
+    -read:
+      - b
+    -write:
+      - b
+    -delete:
+      - b

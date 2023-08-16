@@ -1,5 +1,6 @@
 package com.xkcoding.pay;
 
+import com.xkcoding.pay.main.TestApplicationContextIni;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class SpringBootDemoPayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootDemoPayApplication.class, args);
+      SpringApplication springApplication = new SpringApplication(SpringBootDemoPayApplication.class);
+//      springApplication.addInitializers(new TestApplicationContextIni());
+      springApplication.run(args);
+
     }
 
 }

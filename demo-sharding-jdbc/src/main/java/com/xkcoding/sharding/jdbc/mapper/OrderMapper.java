@@ -2,7 +2,10 @@ package com.xkcoding.sharding.jdbc.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.xkcoding.sharding.jdbc.model.Order;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * <p>
@@ -14,4 +17,5 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public interface OrderMapper extends BaseMapper<Order> {
+    int insertBatch(@Param("list") List<Order> list);
 }

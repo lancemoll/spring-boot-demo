@@ -1,0 +1,2 @@
+com.xkcoding.sharding.jdbc.config.ConsistentShardingAlgorithm
+com.xkcoding.sharding.jdbc.config.ConsistentShardingLongAlgorithm
